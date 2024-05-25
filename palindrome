@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Palindrome
+{
+    public static void main(String[] args) 
+    {
+        Scanner s=new Scanner(System.in);
+        System.out.print("Enter a number=");
+        int number=s.nextInt();
+        int copy=number;
+        int reversed=0;
+        int reminder=0;
+        while(number>0)
+        {
+            reminder=number%10;
+            reversed=reversed*10+reminder;
+            number=number/10;
+        }
+        if(copy==reversed)
+        {
+            System.out.print(copy+" is palindrome");
+        }
+        else{
+            System.out.print(copy+" is not palindrome");
+        }
+    }
+}
