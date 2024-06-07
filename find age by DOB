@@ -1,0 +1,26 @@
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Scanner;
+
+public class FindAge {
+
+	public static void main(String[] args) throws ParseException {
+		Calendar calendar = Calendar.getInstance();
+		int current_year = calendar.getWeekYear();
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter your Birth Date in dd/mm/yyyy format = ");
+		String birthdate = sc.next();
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/mm/yyy");
+		Date d = sdf.parse(birthdate);
+		calendar.setTime(d);
+		int birth_year = calendar.getWeekYear();
+		int age = current_year - birth_year;
+		System.out.println("Current year:"+current_year);
+		System.out.println("Birth year"+birth_year);
+		System.out.println("Age:" + age);
+		sc.close();
+	}
+
+}
