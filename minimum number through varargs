@@ -1,0 +1,22 @@
+public class MinNumberVarargs {
+
+	public static int getmin(int... min) {
+
+		int minnumber = min[0];
+		for (int number : min) {
+
+			if (number < minnumber) {
+				minnumber = number;
+			}
+		}
+
+		return minnumber;
+	}
+
+	public static void main(String args[]) {
+		{
+			System.out.println("Minimum number :" + getmin(10, 9, 30, 5));
+		}
+
+	}
+}
