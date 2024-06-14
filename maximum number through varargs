@@ -1,0 +1,18 @@
+public class MaxNumberVarargs {
+	public static int getmax(int... max) {
+		int maxnumber = 0;
+		for (int number : max) {
+			
+			if (number > maxnumber) {
+				maxnumber = number;
+			}
+		}
+		
+		return maxnumber;
+	}
+	public static void main(String args[])
+	{
+		System.out.println("Maximum number :"+ getmax(1,10,30,5));
+	}
+
+}
