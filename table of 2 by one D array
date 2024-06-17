@@ -1,0 +1,18 @@
+import java.util.Arrays;
+
+public class Table2OneDArray {
+
+	public static void main(String[] args) {
+
+		int[] table = new int[11];
+
+		for (int i = 0; i < 11; i++) {
+			table[i] = 2 * i;
+		}
+
+		System.out.println("Table of 2:");
+
+		System.out.println(Arrays.toString(table));
+
+	}
+}
