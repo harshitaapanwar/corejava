@@ -1,0 +1,16 @@
+public class MinNumber1DArray {
+	public static void main(String[] args) {
+		int[] minnumbers = { 34, 56, 89, 10, 33, 52, 74 };
+		int min = minnumbers[0];
+		for (int i = 0; i < minnumbers.length; i++) {
+
+			if (min > minnumbers[i]) {
+				min = minnumbers[i];
+			}
+
+		}
+		System.out.println(min);
+
+	}
+
+}
