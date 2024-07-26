@@ -1,0 +1,30 @@
+import java.util.Random;
+
+public class RandomNumberInArray {
+	public static void main(String[] args) {
+		int[][][][][] t5 = new int[5][5][5][5][5];
+		Random r=new Random();
+		for (int table1 = 0; table1 < t5.length; table1++) {
+			System.out.println("Table1 Number:" + (table1 + 1));
+			for (int table2 = 0; table2 < t5[table1].length; table2++) {
+				System.out.println("Table2 Number:" + (table2 + 1));
+				for (int table3 = 0; table3 < t5[table1][table2].length; table3++) {
+					System.out.println("Table3 Number:" + (table3 + 1));
+					{
+						for (int row = 0; row < t5[table1][table2][table3].length; row++) {
+							for (int col = 0; col < t5[table1][table2][table3][row].length; col++) {
+								
+								System.out.print(r.nextInt(10)+t5[table1][table2][table3][row][col]);
+							}
+							System.out.println();
+						}
+						System.out.println();
+
+					}
+					System.out.println();
+				}
+			}
+		}
+	}
+
+}
